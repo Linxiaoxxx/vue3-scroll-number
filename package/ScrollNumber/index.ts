@@ -1,10 +1,8 @@
 import { App } from 'vue'
 import ScrollNumber from './index.vue'
 
-ScrollNumber.name = 'scroll-number'
-
 ScrollNumber.install = (app: App) => {
-  app.component('scroll-number', ScrollNumber)
+  app.component(ScrollNumber.name, ScrollNumber)
 }
 
 export default ScrollNumber

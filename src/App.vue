@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import ScrollNumber from '../package/ScrollNumber'
 
 const num = ref(1)
 const handleAdd = () => {
