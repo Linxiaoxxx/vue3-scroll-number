@@ -1,7 +1,7 @@
 {
   "name": "vue3-scroll-number",
   "private": false,
-  "version": "0.0.9",
+  "version": "0.0.10",
   "author": "linxiaoxxx",
   "main": "./lib/scroll-number.umd.js",
   "module": "./lib/scroll-number.mjs",

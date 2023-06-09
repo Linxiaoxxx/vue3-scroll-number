@@ -31,7 +31,7 @@ const props = defineProps({
   },
   color: {
     type: [String],
-    default: ''
+    default: '#606cee'
   },
   customStyle: {
     type: Object,
@@ -76,8 +76,8 @@ const animateStyle = (num: number | string) => {
 .number {
   overflow: hidden;
 }
-.common-style.dot {
-  width: 14px;
+.number.dot {
+  width: 8px;
 }
 .scroll-container {
   display: flex;
