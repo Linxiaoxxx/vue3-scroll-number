@@ -18,20 +18,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "example/**/*.ts",
-    "example/**/*.d.ts",
-    "example/**/*.tsx",
-    "example/**/*.vue",
-    "package/**/*.ts",
-    "package/**/*.d.ts",
-    "package/**/*.tsx",
-    "package/**/*.vue"
-  ],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "package/**/*.ts", "package/**/*.d.ts", "package/**/*.tsx", "package/**/*.vue"],
   "references": [
     {
       "path": "./tsconfig.node.json"

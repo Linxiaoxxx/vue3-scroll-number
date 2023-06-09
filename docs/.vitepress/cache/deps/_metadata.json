@@ -1,0 +1,29 @@
+{
+  "hash": "11684068",
+  "browserHash": "287c5bad",
+  "optimized": {
+    "vue": {
+      "src": "../../../../node_modules/.pnpm/vue@3.3.4/node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "f2e1d69d",
+      "needsInterop": false
+    },
+    "@theme/index": {
+      "src": "../../../../node_modules/.pnpm/vitepress@1.0.0-beta.1_@algolia+client-search@4.17.2_@types+node@20.2.5_less@4.1.3_search-insights@2.6.0/node_modules/vitepress/dist/client/theme-default/index.js",
+      "file": "@theme_index.js",
+      "fileHash": "f0565e5c",
+      "needsInterop": false
+    },
+    "dayjs": {
+      "src": "../../../../node_modules/.pnpm/dayjs@1.11.8/node_modules/dayjs/dayjs.min.js",
+      "file": "dayjs.js",
+      "fileHash": "f1cb7f67",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-RSJERJUL": {
+      "file": "chunk-RSJERJUL.js"
+    }
+  }
+}

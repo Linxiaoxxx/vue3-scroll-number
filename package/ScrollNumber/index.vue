@@ -1,12 +1,13 @@
 <template>
   <div style="display: flex; align-items: center">
-    <div v-for="(item, index) in numberToArray" :key="index" :class="['number', { dot: item === '.' }]" :style="numStyle">
+    <div v-for="(item, index) in numberToArray" :key="index" :class="['number', { sign: ignoreStr.includes(item) }]" :style="numStyle">
       <div class="scroll-container" :style="{ ...animateStyle(item) }">
         <div v-for="(v, i) in numberBox" :key="i" class="scroll-single" :style="{ color: color }">
           {{ v }}
         </div>
       </div>
     </div>
+
     <!-- <span v-show="isShowWan">万</span> -->
   </div>
 </template>
@@ -22,7 +23,7 @@ import { computed, ref, watch } from 'vue'
 
 const props = defineProps({
   number: {
-    type: Number,
+    type: [Number, String],
     default: 0
   },
   h: {
@@ -41,7 +42,8 @@ const props = defineProps({
   }
 })
 
-const numberBox = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, '.']
+const numberBox = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, '.', '-', ':', ' ']
+const ignoreStr = ['.', ' ', '-', ':']
 const numberToArray = ref<any[]>([])
 // const isShowWan = ref(false)
 
@@ -64,11 +66,9 @@ const numStyle = computed(() => {
   }
 })
 
-const animateStyle = (num: number | string) => {
-  if (num !== '.') {
-    return { transform: `translate(0,-${+num * props.h}px)` }
-  }
-  return { transform: `translate(0,-${+10 * props.h}px)` }
+const animateStyle = (item: any) => {
+  const index = item.trim().length === 0 ? 9999 : numberBox.findIndex((i) => item == i)
+  return { transform: `translate(0,-${index * props.h}px)` }
 }
 </script>
 
@@ -76,8 +76,9 @@ const animateStyle = (num: number | string) => {
 .number {
   overflow: hidden;
 }
-.number.dot {
-  width: 8px;
+.number.sign {
+  width: 12px;
+  margin: 0 4px;
 }
 .scroll-container {
   display: flex;

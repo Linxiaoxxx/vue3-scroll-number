@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import ScrollNumber from '../package/ScrollNumber'
 
-const num = ref(1)
+const num = ref('2023-06-09 15:42:12')
 const handleAdd = () => {
   num.value += 1
 }

@@ -5,6 +5,7 @@ import dts from 'vite-plugin-dts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: 'vue3-scroll-number',
   plugins: [vue(), dts()],
   build: {
     outDir: 'lib',
