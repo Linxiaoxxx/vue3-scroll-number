@@ -4,7 +4,7 @@
 
 ## 预览
 
-![效果预览](https://linxiaoxxx.github.io/vue3-scroll-number/)
+[效果预览](https://linxiaoxxx.github.io/vue3-scroll-number/)
 
 ## 安装
 
