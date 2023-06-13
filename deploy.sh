@@ -1,3 +1,4 @@
+#!/bin/bash
 # 确保脚本抛出遇到的错误
 set -e
 
@@ -11,6 +12,6 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f https://github.com/Linxiaoxxx/vue3-scroll-number.git main:gh-pages
+git push -f https://github.com/Linxiaoxxx/vue3-scroll-number.git master:gh-pages
 
 cd -

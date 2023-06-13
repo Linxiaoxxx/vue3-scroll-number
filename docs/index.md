@@ -2,6 +2,7 @@
 import ScrollNumber from "../package/ScrollNumber/index.vue"
 import {ref,onMounted} from 'vue'
 import dayjs from 'dayjs'
+import "../package/ScrollNumber/index.less"
 
 let timer = null
 const time = ref(dayjs().format('YYYY-MM-DD HH:mm:ss'))
