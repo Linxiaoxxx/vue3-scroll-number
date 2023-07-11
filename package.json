@@ -1,16 +1,17 @@
 {
   "name": "vue3-scroll-number",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "linxiaoxxx",
   "main": "./lib/scroll-number.umd.js",
   "module": "./lib/scroll-number.mjs",
-  "types": ".lib/components/index.d.ts",
+  "types": "./lib/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
   "exports": {
     "./lib/style.css": "./lib/style.css",
+    "./css": "./lib/style.css",
     ".": {
       "import": "./lib/scroll-number.mjs",
       "require": "./lib/scroll-number.umd.js"
@@ -53,7 +54,8 @@
   "homepage": "https://github.com/Linxiaoxxx/vue3-scroll-number#readme",
   "files": [
     "package.json",
-    "lib"
+    "lib",
+    "README.md"
   ],
   "keywords": [
     "vue3",

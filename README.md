@@ -1,6 +1,6 @@
 # vue3-scroll-number
 
-基于 vue3+ts 实现的数字滚动动效，支持日期格式，支持数字格式化中的相关符号，如有遗漏的符号，请在issues中告知我
+基于 vue3+ts 实现的数字滚动动效，支持日期格式，支持数字格式化中的相关符号，如有遗漏的符号，请在 issues 中告知我
 
 ## 预览
 
@@ -30,7 +30,7 @@ createApp(App).use(ScrollNumber).mount('#app');
 
 ```
 import { ScrollNumber } from 'vue3-scroll-number';
-import 'vue3-scroll-number/lib/style.css' // 引入样式
+import 'vue3-scroll-number/css' // 引入样式
 ```
 
 ## 页面中
