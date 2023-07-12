@@ -10,7 +10,7 @@ const handleAdd = () => {
 
 <template>
   <div class="add-box">
-    <scroll-number :number="num" color="#2995ff" :h="36" :style="{ fontWeight: 700 }" />
+    <scroll-number :number="num" color="#2995ff" :h="36" />
     <button @click="handleAdd">Add Number</button>
   </div>
 </template>

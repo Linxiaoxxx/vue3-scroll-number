@@ -1,7 +1,7 @@
 <template>
   <div style="display: flex; align-items: center">
     <div v-for="(item, index) in numberToArray" :key="index" :class="['number', { sign: ignoreStr.includes(item) }]" :style="numStyle">
-      <div class="scroll-container" :style="{ ...animateStyle(item) }">
+      <div class="scroll-container" :style="{ ...animateStyle(item) }" v-bind="getBindValue">
         <div v-for="(v, i) in numberBox" :key="i" class="scroll-single" :style="{ color: color }">
           {{ v }}
         </div>
@@ -18,13 +18,13 @@ export default {
 }
 </script>
 <script lang="ts" setup>
-import { computed, ref, watch } from 'vue'
+import { computed, ref, watch, useAttrs } from 'vue'
 // import './index.less'
 
 const props = defineProps({
   number: {
     type: [Number, String],
-    default: 0
+    required: true
   },
   h: {
     type: Number, // 数字高度
@@ -39,6 +39,14 @@ const props = defineProps({
     default: () => {
       return {}
     }
+  }
+})
+
+const attrs = useAttrs()
+// 绑定自定义属性，包括class
+const getBindValue = computed(() => {
+  return {
+    ...attrs
   }
 })
 
